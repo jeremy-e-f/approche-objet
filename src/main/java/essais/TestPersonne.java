@@ -9,7 +9,10 @@ public class TestPersonne {
 		
 		Personne p1= new Personne("Jérémy","FROMINVILLE", new AdressePostale(5,"Rue de Paris",84100,"Toulouse"));
 		Personne p2= new Personne("Tareck","FRAN", new AdressePostale(7,"Rue de Paris",84100,"Toulouse"));
-
+		
+		Personne p3= new Personne("Frantz","FANON", null);
+		p3.setAdresse(new AdressePostale(9,"Rue de Paris",84100,"Toulouse"));
+		
 	}
 
 }
