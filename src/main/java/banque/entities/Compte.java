@@ -30,4 +30,9 @@ public class Compte {
 		return this.soldeCompte;
 	}
 	
+	public String toString(){
+		return "Compte, numéro: "+numeroCompte+
+				"\nsolde du compte: "+soldeCompte;	
+	}
+	
 }
