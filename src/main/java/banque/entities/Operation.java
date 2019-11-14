@@ -36,5 +36,7 @@ public abstract class Operation {
 	}
 	
 	public abstract String afficherType();
+	
+	public abstract String getType();
 
 }

@@ -14,4 +14,8 @@ public class Credit extends Operation{
 		return "Credit";
 	}
 
+	public String getType() {
+		return "CREDIT";
+	}
+
 }

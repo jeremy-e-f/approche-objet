@@ -13,5 +13,9 @@ public class Debit extends Operation{
 	public String afficherType(){
 		return "Debit";
 	}
+	
+	public String getType() {
+		return "DEBIT";
+	}
 
 }

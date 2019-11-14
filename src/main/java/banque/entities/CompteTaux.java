@@ -17,6 +17,10 @@ public class CompteTaux extends Compte{
 		this.tauxRenumeration= tauxRenumeration;
 	}
 	
+	public boolean compteAvecTaux(){
+		return true;
+	}
+	
 	public String toString(){
 		return super.toString()+"\ntaux de rénumération: "+this.tauxRenumeration;
 	}
