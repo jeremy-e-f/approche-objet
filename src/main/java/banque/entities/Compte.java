@@ -3,13 +3,13 @@ package banque.entities;
 public class Compte {
 
 	String numeroCompte;
-	float soldeCompte;
+	double soldeCompte;
 	
 	public Compte(){
 		
 	}
 	
-	public Compte(String numeroCompte, float soldeCompte){
+	public Compte(String numeroCompte, double soldeCompte){
 		this.numeroCompte= numeroCompte;
 		this.soldeCompte= soldeCompte;
 	}
@@ -18,7 +18,7 @@ public class Compte {
 		this.numeroCompte= numeroCompte;
 	}
 	
-	public void setSoldeCompte(float soldeCompte){
+	public void setSoldeCompte(double soldeCompte){
 		this.soldeCompte= soldeCompte;
 	}
 	
@@ -26,7 +26,7 @@ public class Compte {
 		return this.numeroCompte;
 	}
 	
-	public float getsoldeCompte(){
+	public double getsoldeCompte(){
 		return this.soldeCompte;
 	}
 	
