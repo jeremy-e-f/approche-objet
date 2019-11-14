@@ -2,8 +2,8 @@ package banque.entities;
 
 public class Compte {
 
-	String numeroCompte;
-	double soldeCompte;
+	private String numeroCompte;
+	private double soldeCompte;
 	
 	public Compte(){
 		
