@@ -1,7 +1,6 @@
 package banque.entities;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class CompteDaoMem implements CompteDao{
 
@@ -13,12 +12,14 @@ public class CompteDaoMem implements CompteDao{
 
 	@Override
 	public Compte[] lister() {
-		return (Compte[])listeComptes.toArray();
+		Compte[] tableau = new Compte[listeComptes.size()];
+		listeComptes.toArray(tableau);
+		return tableau;
 	}
 
 	@Override
 	public void sauvegarder(Compte nvCompte) {
-		listeComptes.add(nvCompte);
+		listeComptes.add((Compte)nvCompte);
 	}
 
 	@Override
@@ -33,13 +34,10 @@ public class CompteDaoMem implements CompteDao{
 
 	@Override
 	public Compte getCompte(String numero) {
-		Iterator<Compte> it = listeComptes.iterator();
-		 
-		while(it.hasNext()){
-		       Compte compte = it.next();
-		       if(compte.getNumeroCompte()== numero){
-		    	   return compte;
-		       }
+		for(Compte compte : listeComptes){
+	       if(compte.getNumeroCompte().equals(numero)){
+	    	   return compte;
+	       }
 		}
 		return null;
 	}

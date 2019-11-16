@@ -1,7 +1,6 @@
 package banque.entities;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Compte {
 
@@ -37,24 +36,20 @@ public class Compte {
 	
 	public double getSolde(){
 		double solde= this.soldeInitial;
-		Iterator<Operation> it= listeOperations.iterator();
-		while(it.hasNext()){
-			Operation op= it.next();
+		for(Operation op : listeOperations){
 			solde+= op.getMontantOperation();
 		}
-		return solde;
+		return Math.round(solde*100)/100;
 	}
 	
 	public double getSolde(String type){
 		double solde= 0;
-		Iterator<Operation> it= listeOperations.iterator();
-		while(it.hasNext()){
-			Operation op= it.next();
+		for(Operation op : listeOperations){
 			if(op.getType().equals(type)){
 				solde+= op.getMontantOperation();
 			}
 		}
-		return solde;
+		return Math.round(solde*100)/100;
 	}
 	
 	public ArrayList<Operation> getListeOperations(){
