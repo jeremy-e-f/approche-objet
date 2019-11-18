@@ -3,6 +3,8 @@ package sets;
 import java.util.HashSet;
 import java.util.Iterator;
 
+import entites.Pays;
+
 public class TestSetObjet {
 
 	public static void main(String[] args) {

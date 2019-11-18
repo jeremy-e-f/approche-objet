@@ -3,7 +3,7 @@ package maps;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import sets.Pays;
+import entites.Pays;
 
 public class MapPays {
 

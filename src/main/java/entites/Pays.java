@@ -1,6 +1,6 @@
-package sets;
+package entites;
 
-public class Pays {
+public class Pays implements Comparable<Pays>{
 	private String nom;
 	private int nbHabitants;
 	private double PibParHabitant;
@@ -37,6 +37,17 @@ public class Pays {
 	
 	public String toString(){
 		return nom+", nombre d'habitants: "+nbHabitants+", PIB/habitant: "+PibParHabitant;
+	}
+
+	@Override
+	/** Par ordre alphabétique */
+	/*public int compareTo(Pays pays) {
+		return nom.compareToIgnoreCase(pays.getNom());
+	}*/
+	
+	/** Par PIB/habitant */
+	public int compareTo(Pays pays) {
+		return ((Double)PibParHabitant).compareTo(pays.getPibParHabitant());
 	}
 	
 }
