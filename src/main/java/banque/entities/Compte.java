@@ -1,6 +1,7 @@
 package banque.entities;
 
 import java.util.ArrayList;
+import org.apache.commons.lang3.builder.EqualsBuilder;
 
 public class Compte {
 
@@ -70,8 +71,12 @@ public class Compte {
 		return false;
 	}
 	
-	public boolean equals(Compte compte){
-		return compte.getNumeroCompte()== this.getNumeroCompte(); 
+	public boolean equals(Object o){
+		if(!(o instanceof Compte)){
+			return false;
+		}
+		Compte compte= (Compte)o;
+		return new EqualsBuilder().append(this.getNumeroCompte(), compte.getNumeroCompte()).isEquals() && this.getSoldeInitial()== compte.getSoldeInitial();
 	}
 	
 }

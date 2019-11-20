@@ -15,7 +15,7 @@ public class TestBanque {
 	public static void main(String[] args) {
 		//Compte compte= new Compte("021854181ED", 12485.5);
 		
-		Compte listeComptes[]= new Compte[2];
+		/*Compte listeComptes[]= new Compte[2];
 		// Compte normal
 		listeComptes[0]= new Compte("218", 12485.5);
 		listeComptes[0].ajouterOperation(new Debit("10/02/2019",14.9));
@@ -28,13 +28,13 @@ public class TestBanque {
 		
 		for(int i= 0; i< listeComptes.length; i++){
 			System.out.println("\n"+listeComptes[i]);
-		}
+		}*/
 		
 		/**
 		 * APPLICATION BANCAIRE
 		 */
 		
-		CompteDao compteDao= new CompteDaoMem();
+		/*CompteDao compteDao= new CompteDaoMem();
 		compteDao.sauvegarder(listeComptes[0]);
 		compteDao.sauvegarder(listeComptes[1]);
 		Compte liste[];
@@ -44,7 +44,7 @@ public class TestBanque {
 		byte choix;
 		
 		do{
-			liste= compteDao.lister();
+			liste= (Compte[])compteDao.lister().toArray();
 			System.out.println("\n\n***** Administration des comptes *****"+
 				"\n1. Lister les comptes"+
 				"\n2. Ajouter un nouveau compte"+
@@ -135,7 +135,16 @@ public class TestBanque {
 		}while(choix!= 99);
 		saisie.close();
 		
-		System.out.println("\nAurevoir :(");
+		System.out.println("\nAurevoir :(");*/
+		
+		Compte compte1= new Compte("021854181ED", 12485.5);
+		Compte compte2= new Compte("021854181ED", 12485.5);
+		System.out.println("Compte1 == Compte2 "+compte1.equals(compte2));
+		
+		Compte compte3 = compte2;
+		System.out.println("Compte3 == Compte2 "+compte3.equals(compte2));
+		
+		
 	}
 	
 }

@@ -1,6 +1,7 @@
 package banque.entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CompteDaoMem implements CompteDao{
 
@@ -11,10 +12,8 @@ public class CompteDaoMem implements CompteDao{
 	}
 
 	@Override
-	public Compte[] lister() {
-		Compte[] tableau = new Compte[listeComptes.size()];
-		listeComptes.toArray(tableau);
-		return tableau;
+	public List<Compte> lister() {
+		return listeComptes;
 	}
 
 	@Override

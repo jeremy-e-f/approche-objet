@@ -1,5 +1,7 @@
 package banque.entities;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+
 public abstract class Operation {
 	
 	private String dateOperation;
@@ -33,6 +35,14 @@ public abstract class Operation {
 
 	public String toString() {
 		return "Operation, date: " + this.dateOperation + "\nmontant: " + this.montantOperation+"\ntype: "+afficherType();
+	}
+	
+	public boolean equals(Object o){
+		if(!(o instanceof Operation)){
+			return false;
+		}
+		Operation op= (Operation)o;
+		return new EqualsBuilder().append(dateOperation, op.getDateOperation()).isEquals() && montantOperation== op.getMontantOperation();
 	}
 	
 	public abstract String afficherType();
