@@ -31,6 +31,10 @@ public enum Saison {
 		this.ordre = ordre;
 	}
 	
+	public String toString(){
+		return this.getLibelle()+" ("+this.ordre+")";
+	}
+	
 	public static Saison getSaison(String libelle){
 		return Saison.valueOf(libelle.toUpperCase());
 	}
